@@ -7,10 +7,11 @@ router.add("/universe", "/pages/universe.html", "url(/assets/mountains-universe0
 router.add("/exploration", "/pages/exploration.html", "url(/assets/mountains-universe-3.png)")
 router.add(404, "/pages/404.html", "url(/assets/mountains-universe-4.png)")
 
-
-
 router.handle()
 
 
 window.onpopstate = () => router.handle()
 window.route = () => router.route()
+
+
+

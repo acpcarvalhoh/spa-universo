@@ -49,12 +49,8 @@ export class Router {
     changeBackground(background) {
         const body = document.body;
         body.style.background = background;
+    
     }
 
 
-    redirect(){
-        window.location.href = '/universe';
-
-        console.log('teste')
-    }
 }

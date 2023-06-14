@@ -76,7 +76,7 @@ main h1{
     color:  #E1E1E6;
 }
 
-main button{
+main .redirect{
     padding: 12px 32px;
     border-radius: 5px;
     background: none;
@@ -87,4 +87,5 @@ main button{
     line-height: 24px;
     color: #FFFFFF;
     cursor: pointer;
+    text-decoration: none;
 }
