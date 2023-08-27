@@ -21,7 +21,19 @@ export class Router {
       
         window.history.pushState({}, "", event.target.href)
       
-        this.handle()
+        if (event.target.classList.contains("redirect")) {
+           
+            const universeLink = document.querySelector('ul li a[href="/universe"]');
+            if (universeLink) {
+                
+                universeLink.classList.add('active');
+            }
+
+            this.handle();
+
+        }else{
+            this.handle()
+        }
       
     }
 
@@ -37,19 +49,21 @@ export class Router {
 
             document.getElementById('app').innerHTML = html
 
+           
             this.changeBackground(route.background)
 
             
         })
 
-        console.log(pathname)
+        
         
     }
 
     changeBackground(background) {
         const body = document.body;
         body.style.background = background;
-    
+
+        body.style.background = `${background} no-repeat bottom center / cover`;
     }
 
 
